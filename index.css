@@ -1,16 +1,18 @@
 :root[data-theme="light"] {
-    --text: #120d11;
-    --background: #fbf9fa;
-    --primary: #ededed;
-    --accent: #cccccc;
-}
-
-:root[data-theme="dark"] {
-    --text: #f2edf1;
-    --background: #060405;
-    --primary: #131313;
-    --accent: #323232;
-}
+    --text: #040316;
+    --background: #fbfbfe;
+    --primary: #f7951d;
+    --secondary: #f1c6a7;
+    --accent: #e1a82d;
+  }
+  :root[data-theme="dark"] {
+    --text: #eae9fc;
+    --background: #010104;
+    --primary: #e28008;
+    --secondary: #582d0e;
+    --accent: #d2991e;
+  }
+  
 
 html {
     scroll-behavior: smooth;
