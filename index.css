@@ -74,7 +74,7 @@ nav a:hover {
     transition: 0.3s;
 }
 
-nav li::after {
+/* nav a::after {
     content: "";
     position: absolute;
     bottom: -5px;
@@ -85,9 +85,9 @@ nav li::after {
     transition: width 0.3s ease-in-out;
 }
 
-nav li:hover::after {
+nav a:hover::after {
     width: 100%;
-}
+} */
 
 .sidebar {
     position: fixed;
@@ -122,9 +122,56 @@ nav li:hover::after {
     display: none;
 }
 
+#container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh;
+    color: var(--text);
+    min-width: 100vw;
+    background-image: url("images/lssdphoto.png");
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 0;
+	flex-direction: column;
+    text-align: center;
+    z-index: 1;
+}
 
+.heading {
+    font-size: 120px;
+    margin: 20px;
+}
 
+#arrow {
+    font-size: 50px;
+    margin: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: absolute;
+    bottom: 0;
+    color: var(--text);
+    animation: ease-in-out 2s infinite arrow;
+    /* -webkit-text-stroke: #060405 2px; */
+}
 
+#arrow:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+@keyframes arrow {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+    
+}
 
 
 @media(max-width: 550px) {
