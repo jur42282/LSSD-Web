@@ -2,14 +2,14 @@
     --text: #040316;
     --background: #fbfbfe;
     --primary: #f7951d;
-    --secondary: #f1c6a7;
+    --secondary: #ededed;
     --accent: #e1a82d;
   }
   :root[data-theme="dark"] {
     --text: #eae9fc;
     --background: #010104;
     --primary: #e28008;
-    --secondary: #582d0e;
+    --secondary: #0D0D11;
     --accent: #d2991e;
   }
   
@@ -43,7 +43,7 @@ body::-webkit-scrollbar {
 }
 
 nav {
-    background-color: var(--primary);
+    background: linear-gradient(to left, var(--primary), var(--secondary));
     box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
@@ -131,17 +131,20 @@ nav a:hover::after {
     justify-content: center;
     flex-direction: column;
     margin: 20px 200px;
+    background-color: var(--secondary);
+    padding: 10px;
+    border-radius: 20px;
 }
 
 .personInfo h1 {
     font-size: 4rem;
-    font-weight: 600    ;
     margin: 0;
     padding: 0;
     color: var(--text);
     text-align: center;
-    background-color: var(--primary);
-    padding: 0px 100%;
+    background: var(--primary);
+    padding: 0px 20px;
+    border-radius: 20px;
 }
 
 .content {
@@ -172,6 +175,35 @@ nav a:hover::after {
     font-weight: 600;
     margin-left: 20px;
     padding: 0;
+}
+
+#executive {
+    justify-content: space-between;
+} 
+
+.person {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--secondary);
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.person h2 {
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+    color: var(--text);
+    text-align: center;
+}
+
+.person:hover {
+    background-color: var(--primary);
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 @media(max-width: 550px) {

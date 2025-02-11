@@ -2,7 +2,7 @@
     --text: #040316;
     --background: #fbfbfe;
     --primary: #f7951d;
-    --secondary: #f1c6a7;
+    --secondary: #0D0D11;
     --accent: #e1a82d;
   }
   :root[data-theme="dark"] {
@@ -43,7 +43,7 @@ body::-webkit-scrollbar {
 }
 
 nav {
-    background-color: var(--primary);
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
