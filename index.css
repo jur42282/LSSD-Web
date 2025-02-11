@@ -4,6 +4,7 @@
     --primary: #ededed;
     --accent: #cccccc;
 }
+
 :root[data-theme="dark"] {
     --text: #f2edf1;
     --background: #060405;
@@ -36,12 +37,12 @@ body {
 }
 
 body::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 nav {
     background-color: var(--primary);
-    box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 9;
@@ -98,7 +99,7 @@ nav a:hover::after {
     z-index: 999;
     background-color: var(--primary);
     backdrop-filter: blur(10px);
-    box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
     display: none;
     flex-direction: column;
     align-items: flex-start;
@@ -115,7 +116,7 @@ nav a:hover::after {
 }
 
 .material-symbols-outlined {
-    font-variation-settings: 'FILL'0,'wght'400, ;
+    font-variation-settings: 'FILL' 0, 'wght' 400, ;
 }
 
 .menu-button {
@@ -133,7 +134,7 @@ nav a:hover::after {
     background-size: cover;
     background-position: center;
     margin-bottom: 0;
-	flex-direction: column;
+    flex-direction: column;
     text-align: center;
     z-index: 1;
 }
@@ -141,6 +142,11 @@ nav a:hover::after {
 .heading {
     font-size: 120px;
     margin: 20px;
+    animation: show 1s ease-in-out;
+}
+
+#outline {
+    animation: showup 2s ease-in-out;
 }
 
 #arrow {
@@ -164,13 +170,15 @@ nav a:hover::after {
     0% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(10px);
     }
+
     100% {
         transform: translateY(0);
     }
-    
+
 }
 
 
@@ -188,6 +196,7 @@ nav a:hover::after {
         transition: ease;
     }
 }
+
 .hidden {
     opacity: 0;
     transition: ease-in-out 1s;
@@ -195,4 +204,29 @@ nav a:hover::after {
 
 .show {
     opacity: 1;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes showup {
+    0% {
+        opacity: 0;
+        transform: translateY(300px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
 }
